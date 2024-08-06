@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: acme-payment
+  cloud:
+    config:
+      enabled: true
+  config:
+    import:
+      - configserver:http://localhost:8888

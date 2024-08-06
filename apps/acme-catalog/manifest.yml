@@ -1,0 +1,12 @@
+---
+applications:
+- name: acme-catalog
+  path: build/libs/acme-catalog-0.0.1-SNAPSHOT.jar
+  env:
+    JBP_CONFIG_SPRING_AUTO_RECONFIGURATION: '{enabled: true}'
+    SPRING_PROFILES_ACTIVE: cloud
+    JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 17.+ } }'
+  services:
+    - acme-config
+    - acme-postgres
+    - acme-registry

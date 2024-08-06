@@ -1,0 +1,20 @@
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: info,health
+spring:
+  ai:
+    openai:
+      chat:
+        options:
+          model: gpt-3.5-turbo
+  application:
+    name: acme-assist
+  autoconfigure:
+    exclude:
+    - org.springframework.ai.autoconfigure.vectorstore.pgvector.PgVectorStoreAutoConfiguration
+  cloud:
+    config:
+      enabled: false
